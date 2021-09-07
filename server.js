@@ -120,15 +120,15 @@ app.use((err, req, res, next) => {
     }
 });
 
-/*
+
 app.get(["/"], (req, res) => {
     res.sendFile(path.join(__dirname, "www/client.html"))
-}); */
+});
 
 // all start from here
-app.get(['/'], (req, res) => {
-    res.sendFile(path.join(__dirname, 'www/landing.html'));
-});
+// app.get(['/'], (req, res) => {
+//     res.sendFile(path.join(__dirname, 'www/landing.html'));
+// });
 
 // set new room name and join
 app.get(['/newcall'], (req, res) => {
