@@ -4511,7 +4511,7 @@ function openVideoUrlPlayer(config) {
 function getYoutubeEmbed(url) {
     let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     let match = url.match(regExp);
-    return match && match[7].length == 11 ? 'https://www.youtube.com/embed/' + match[7] + '?autoplay=1' : false;
+    return match && match[7].length == 11 ? 'https://www.youtube-nocookie.com/embed/' + match[7] + '?autoplay=1' : false;
 }
 
 /**
