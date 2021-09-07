@@ -681,6 +681,8 @@ function joinToChannel() {
         peer_hand: myHandStatus,
         peer_rec: isRecScreenSream,
     });
+
+    dataLayer.push({'event': 'user_connected'});
 }
 
 /**
