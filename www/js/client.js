@@ -682,7 +682,12 @@ function joinToChannel() {
         peer_rec: isRecScreenSream,
     });
 
-    dataLayer.push({'event': 'user_connected'});
+    dataLayer.push({
+        'event': 'user_connected',
+        'myPeerName': myPeerName,
+        'roomId': roomId,
+        'userName': peerGeo.ipName
+    });
 }
 
 /**
