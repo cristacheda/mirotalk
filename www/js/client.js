@@ -687,7 +687,7 @@ function joinToChannel() {
  * welcome message
  */
 function welcomeUser() {
-    const myRoomUrl = window.location.href;
+    const myRoomUrl = "http://meet.webventures.ro" + window.location.pathname;
     playSound('newMessage');
     Swal.fire({
         background: swalBackground,
@@ -2333,7 +2333,7 @@ function showLeftButtonsAndMenu() {
  * https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
  */
 async function shareRoomUrl() {
-    const myRoomUrl = window.location.href;
+    const myRoomUrl = "http://meet.webventures.ro" + window.location.pathname;
 
     // navigator share
     let isSupportedNavigatorShare = false;
@@ -2409,7 +2409,7 @@ async function shareRoomUrl() {
 function makeRoomQR() {
     let qr = new QRious({
         element: getId('qrRoom'),
-        value: window.location.href,
+        value: "http://meet.webventures.ro" + window.location.pathname,
     });
     qr.set({
         size: 128,
@@ -2420,7 +2420,7 @@ function makeRoomQR() {
  * Copy Room URL to clipboard
  */
 function copyRoomURL() {
-    let roomURL = window.location.href;
+    let roomURL = "http://meet.webventures.ro" + window.location.pathname;;
     let tmpInput = document.createElement('input');
     document.body.appendChild(tmpInput);
     tmpInput.value = roomURL;
@@ -4511,7 +4511,7 @@ function openVideoUrlPlayer(config) {
 function getYoutubeEmbed(url) {
     let regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     let match = url.match(regExp);
-    return match && match[7].length == 11 ? 'https://www.youtube.com/embed/' + match[7] + '?autoplay=1' : false;
+    return match && match[7].length == 11 ? 'https://www.youtube-nocookie.com/embed/' + match[7] + '?autoplay=1' : false;
 }
 
 /**
